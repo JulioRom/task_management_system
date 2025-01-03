@@ -1,14 +1,15 @@
 # Sistema de Gestión de Tareas
 
-Este proyecto es un **sistema básico de gestión de tareas** desarrollado en **Java**, diseñado para demostrar habilidades en programación orientada a objetos (OOP), estructuras de datos, y pruebas unitarias. Es una herramienta funcional que permite a los usuarios crear, editar, eliminar, listar y buscar tareas mediante un menú interactivo en consola.
+Este proyecto es un **sistema básico de gestión de tareas** desarrollado en **Java**, diseñado para demostrar habilidades en programación orientada a objetos (OOP), estructuras de datos, y pruebas unitarias. Es una herramienta funcional que permite a los usuarios crear, editar, eliminar, listar, buscar y filtrar tareas mediante un menú interactivo en consola.
 
 ## Características Principales
 
 - **Estructura de datos personalizada:** Uso de listas enlazadas para almacenar tareas.
-- **Programación funcional:** Ordenamiento y filtrado eficiente de tareas usando Streams y lambdas.
+- **Programación funcional:** Ordenamiento, búsqueda y filtrado eficiente de tareas usando Streams y lambdas.
 - **Diseño modular:** Clases independientes para manejar las tareas y su gestión.
-- **Pruebas unitarias:** Validación exhaustiva de las funcionalidades con JUnit.
+- **Pruebas unitarias completas:** Validación exhaustiva de las funcionalidades con JUnit, incluyendo casos límite.
 - **Interfaz amigable:** Menú interactivo para facilitar el uso del sistema.
+- **Generación de reportes:** Archivo de resultados generado automáticamente para pruebas unitarias.
 
 ---
 
@@ -57,13 +58,16 @@ Este proyecto es un **sistema básico de gestión de tareas** desarrollado en **
     - Elimina una tarea específica identificada por su ID.
 
 4. **Listar Tareas:**
-    - Muestra las tareas ordenadas por prioridad (ALTA, MEDIA, BAJA).
+    - Muestra las tareas ordenadas por prioridad (BAJA, MEDIA, ALTA).
 
 5. **Buscar Tareas:**
     - Busca tareas por palabras clave en el título o descripción.
 
 6. **Filtrar Tareas:**
     - Filtra las tareas por estado (PENDIENTE, EN PROGRESO, COMPLETADA).
+
+7. **Obtener Tarea por ID:**
+    - Permite obtener los detalles de una tarea específica usando su identificador único.
 
 ---
 
@@ -74,8 +78,14 @@ Las pruebas unitarias se encuentran en `src/test/TaskManagerTest.java`. Validan 
 - Creación de tareas.
 - Edición de tareas.
 - Eliminación de tareas.
-- Listado y ordenamiento de tareas.
-- Búsqueda y filtrado por estado.
+- Listado y ordenamiento de tareas por prioridad.
+- Búsqueda por palabra clave.
+- Filtrado de tareas por estado.
+- Manejo de IDs inexistentes.
+- Obtener tareas específicas por ID.
+
+### Generación Automática de Reportes
+El sistema genera un archivo llamado `test_results.txt` que resume los resultados de las pruebas unitarias, indicando si cada prueba fue exitosa o fallida, junto con detalles relevantes.
 
 ### Ejecutar las Pruebas
 
@@ -99,6 +109,7 @@ TareaModuloDos
 │   ├── test
 │       ├── TaskManagerTest.java    // Pruebas unitarias para TaskManager.
 ├── libs                            // Carpeta con archivos JAR necesarios para JUnit.
+├── test_results.txt                // Archivo generado con resultados de pruebas.
 └── README.md                       // Este archivo.
 ```
 
@@ -116,4 +127,4 @@ _Desarrollador Backend en formación_
 1. Implementar persistencia de datos usando archivos o bases de datos.
 2. Crear una interfaz gráfica para el sistema.
 3. Optimizar los algoritmos para manejo de tareas con grandes volúmenes de datos.
-
+4. Incluir autenticación y manejo de múltiples usuarios.
