@@ -1,0 +1,33 @@
+
+Test Name: testEditTask
+Status: PASSED
+Details: La tarea fue editada correctamente.
+
+Test Name: testListTasksByPriority
+Status: PASSED
+Details: La lista de tareas por prioridad funcionó correctamente.
+
+Test Name: testFilterTasksByStatus
+Status: PASSED
+Details: El filtrado por estado funcionó correctamente.
+
+Test Name: testAddTask
+Status: PASSED
+Details: La tarea fue agregada correctamente.
+
+Test Name: testNonExistentTaskId
+Status: PASSED
+Details: El manejo de IDs inexistentes funcionó correctamente.
+
+Test Name: testSearchTasks
+Status: PASSED
+Details: La búsqueda por palabra clave funcionó correctamente.
+
+Test Name: testGetTaskById
+Status: PASSED
+Details: La obtención de tarea por ID funcionó correctamente.
+
+Test Name: testDeleteTask
+Status: PASSED
+Details: La tarea fue eliminada correctamente.
+
